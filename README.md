@@ -11,7 +11,7 @@ This project is for learning `.NET MAUI` from the book `Introducing .NET MAUI: B
 ### 1. Install System Dependencies
 
 Ensure you have installed `.NET Multi-platform App UI development` component in Visual Studio.
-This project is using `.NET 9.0` version. 
+This project is using version 9.0 of `.NET`. 
 
 ### 2. Clone the Repository
 
