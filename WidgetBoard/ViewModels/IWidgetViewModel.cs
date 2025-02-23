@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WidgetBoard.ViewModels
 {
-    interface IWidgetViewModel
+    public interface IWidgetViewModel
     {
+        int Position { get; set; }
+        string Type { get; set; }
     }
 }
