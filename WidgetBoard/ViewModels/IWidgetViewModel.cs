@@ -8,7 +8,7 @@ namespace WidgetBoard.ViewModels
 {
     public interface IWidgetViewModel
     {
-        int Position { get; set; }
-        string Type { get; set; }
+        public int Position { get; set; }
+        public string Type { get; }
     }
 }
