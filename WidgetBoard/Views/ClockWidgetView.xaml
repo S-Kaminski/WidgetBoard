@@ -7,6 +7,11 @@
     FontSize="60"
     VerticalOptions="Center"
     HorizontalOptions="Center"
-    x:DataType="viewmodels:ClockWidgetViewModel"
-    Text="{Binding Time}">
+    x:DataType="viewmodels:ClockWidgetViewModel">
+    <Label.Text>
+        <MultiBinding StringFormat="{}{0} {1}">
+            <Binding Path="Date" />
+            <Binding Path="Time" />
+        </MultiBinding>
+    </Label.Text>
 </Label>
