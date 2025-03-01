@@ -20,5 +20,5 @@ git clone https://github.com/S-Kaminski/WidgetBoard.git
 cd WidgetBoard
 ```
 
-NuGet package `CommunityToolkit.Mvvm`
+~~NuGet package `CommunityToolkit.Mvvm`~~
 
