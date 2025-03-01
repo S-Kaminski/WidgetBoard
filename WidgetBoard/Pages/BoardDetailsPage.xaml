@@ -21,9 +21,9 @@
                 <Entry Keyboard="Numeric"
                        Text="{Binding NumberOfColumns}" />
                 <Label Text="Number of Rows"
-                       FontAttributes="Bold"
+                       FontAttributes="Bold" />
+                <Entry Keyboard="Numeric"
                        Text="{Binding NumberOfRows}" />
-                <Entry Keyboard="Numeric" />
             </VerticalStackLayout>
         </VerticalStackLayout>
         <Button Text="Save" HorizontalOptions="End" />
