@@ -4,9 +4,25 @@
              x:Class="WidgetBoard.Pages.BoardDetailsPage"
              Title="BoardDetailsPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <VerticalStackLayout Padding="20">
+            <Label Text="Name"
+                   FontAttributes="Bold" />
+            <Entry />
+            <Label Text="Layout"
+                   FontAttributes="Bold" />
+            <HorizontalStackLayout>
+                <RadioButton x:Name="FixedRadioButton"
+                             Content="Fixed" />
+            </HorizontalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Number of Columns"
+                       FontAttributes="Bold" />
+                <Entry Keyboard="Numeric" />
+                <Label Text="Number of Rows"
+                       FontAttributes="Bold" />
+                <Entry Keyboard="Numeric" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Save" HorizontalOptions="End" />
     </VerticalStackLayout>
 </ContentPage>
