@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-
-namespace WidgetBoard.ViewModels
+﻿namespace WidgetBoard.ViewModels
 {
     public class ClockWidgetViewModel : BaseViewModel, IWidgetViewModel //must be partial
     {

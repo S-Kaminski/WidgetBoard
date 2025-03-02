@@ -30,6 +30,6 @@
         </VerticalStackLayout>
         <Button Text="Save"
                 HorizontalOptions="End"
-                Command="{Binding SaveCommand}"/>
+                Command="{Binding SaveCommand}" />
     </VerticalStackLayout>
 </ContentPage>

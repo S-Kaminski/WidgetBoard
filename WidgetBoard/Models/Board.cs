@@ -8,7 +8,7 @@ namespace WidgetBoard.Models
 {
     public class Board
     {
-        public required string Name { get; init; }
-        public required BaseLayout Layout { get; init; }
+        public string Name { get; init; }
+        public BaseLayout Layout { get; init; }
     }
 }
