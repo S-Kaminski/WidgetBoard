@@ -19,6 +19,7 @@ public static class MauiProgram
 
         AddPage<BoardDetailsPage, BoardDetailsPageViewModel>(builder.Services, "boarddetails");
         AddPage<FixedBoardPage, FixedBoardPageViewModel>(builder.Services, "fixedboard");
+        builder.Services.AddTransient<AppShell>();
         builder.Services.AddTransient<AppShellViewModel>();
 
 #if DEBUG
