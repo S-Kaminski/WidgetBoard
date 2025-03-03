@@ -17,9 +17,8 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        builder.Services.AddTransient<BoardDetailsPageViewModel>();
-        builder.Services.AddTransient<BoardDetailsPage>();
-        builder.Services.AddTransient<FixedBoardPage>();
+        AddPage<BoardDetailsPage, BoardDetailsPageViewModel>(builder.Services, "boarddetails");
+        AddPage<FixedBoardPage, FixedBoardPageViewModel>(builder.Services, "fixedboard");
         builder.Services.AddTransient<AppShellViewModel>();
 
 #if DEBUG
@@ -27,5 +26,18 @@ public static class MauiProgram
 #endif
 
         return builder.Build();
+    }
+
+    private static IServiceCollection AddPage<TPage, TViewModel>(
+        IServiceCollection services,
+        string route)
+        where TPage : Page
+        where TViewModel : BaseViewModel
+    {
+        services
+            .AddTransient(typeof(TPage))
+            .AddTransient(typeof(TViewModel));
+        Routing.RegisterRoute(route, typeof(TPage));
+        return services;
     }
 }
