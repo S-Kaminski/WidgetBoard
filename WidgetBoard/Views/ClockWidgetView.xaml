@@ -8,6 +8,11 @@
     VerticalOptions="Center"
     HorizontalOptions="Center"
     x:DataType="viewmodels:ClockWidgetViewModel">
+
+    <Label.BindingContext>
+        <viewmodels:ClockWidgetViewModel />
+    </Label.BindingContext>
+
     <Label.Text>
         <MultiBinding StringFormat="{}{0} {1}">
             <Binding Path="Date" />
