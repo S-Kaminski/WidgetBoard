@@ -5,31 +5,37 @@
              x:Class="WidgetBoard.Pages.BoardDetailsPage"
              x:DataType="viewmodels:BoardDetailsPageViewModel"
              Title="BoardDetailsPage">
-    <VerticalStackLayout>
-        <VerticalStackLayout Padding="20">
-            <Label Text="Name"
+    <Border
+        MinimumWidthRequest="300"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Padding="0">
+        <VerticalStackLayout>
+            <VerticalStackLayout Padding="20">
+                <Label Text="Name"
                    FontAttributes="Bold" />
-            <Entry Text="{Binding BoardName}" />
-            <Label Text="Layout"
+                <Entry Text="{Binding BoardName}" />
+                <Label Text="Layout"
                    FontAttributes="Bold" />
-            <HorizontalStackLayout>
-                <RadioButton x:Name="FixedRadioButton"
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="FixedRadioButton"
                              Content="Fixed"
                              IsChecked="{Binding IsFixed}" />
-            </HorizontalStackLayout>
-            <VerticalStackLayout IsVisible="{Binding IsChecked, Source={x:Reference FixedRadioButton}}">
-                <Label Text="Number of Columns"
+                </HorizontalStackLayout>
+                <VerticalStackLayout IsVisible="{Binding IsChecked, Source={x:Reference FixedRadioButton}}">
+                    <Label Text="Number of Columns"
                        FontAttributes="Bold" />
-                <Entry Keyboard="Numeric"
+                    <Entry Keyboard="Numeric"
                        Text="{Binding NumberOfColumns}" />
-                <Label Text="Number of Rows"
+                    <Label Text="Number of Rows"
                        FontAttributes="Bold" />
-                <Entry Keyboard="Numeric"
+                    <Entry Keyboard="Numeric"
                        Text="{Binding NumberOfRows}" />
+                </VerticalStackLayout>
             </VerticalStackLayout>
-        </VerticalStackLayout>
-        <Button Text="Save"
+            <Button Text="Save"
                 HorizontalOptions="End"
                 Command="{Binding SaveCommand}" />
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Border>
 </ContentPage>
